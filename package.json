@@ -1,0 +1,14 @@
+{
+  "name": "ts-react-express-starter-template",
+  "version": "1.0.0",
+  "scripts": {
+    "build:shared": "cd shared && npm run build",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "npm run build:shared && concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "install:all": "concurrently \"cd shared && npm install\" \"cd backend && npm install\" \"cd frontend && npm install\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
